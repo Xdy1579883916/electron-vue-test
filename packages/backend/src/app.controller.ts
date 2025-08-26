@@ -18,4 +18,9 @@ export class AppController {
   saveImage(@Payload() image: string) {
     return this.appService.saveImageToFile(image)
   }
+
+  @IpcHandle('save-image2')
+  saveImage2(@Payload() image: string) {
+    return this.appService.saveImageToFile(image)
+  }
 }
